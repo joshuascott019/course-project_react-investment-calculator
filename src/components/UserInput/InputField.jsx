@@ -1,8 +1,8 @@
-export default function InputField({ label }) {
+export default function InputField({ label, ...props }) {
   return (
-    <div>
-      <label htmlFor="">{label}</label>
-      <input type="number" />
-    </div>
+    <p>
+      <label>{label}</label>
+      <input type="number" required {...props} />
+    </p>
   );
 }
